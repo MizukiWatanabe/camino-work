@@ -1,5 +1,5 @@
 import '../../styles/globals.css';
-import Header from '../components/header';
+import Header from '../components/Header';
 import NextHeadSeo from 'next-head-seo';
 
 function MyApp({ Component, pageProps }) {

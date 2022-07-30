@@ -12,17 +12,20 @@ const Wrapper = css`
 
 export default function Header() {
   return (
-    <header className="">
-      <nav>
-        <div className="container">
-          <ul className="header">
+    <header className="py-4">
+      <nav className="container">
+        <Link href="/">
+          <a>
+            <h1 className="text-sky-900 text-2xl font-medium">Camino.work</h1>
+          </a>
+        </Link>
+        {/* <ul className="">
             <li>
               <Link href="/">
                 <a className="text-sky-900 text-2xl font-medium">Camino.work</a>
               </Link>
             </li>
-          </ul>
-        </div>
+          </ul> */}
       </nav>
     </header>
   );

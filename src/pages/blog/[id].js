@@ -1,8 +1,9 @@
 import { client } from '../../libs/client';
 import { MyPageSeo } from '../../components/pageSeo';
+import dayjs from 'dayjs';
 
 export default function BlogId({ blogs }) {
-  const date = blogs.publishedAt;
+  const publishedAt = dayjs(blogs.publishedAt).format('YYYY/MM/DD');
 
   return (
     <>
@@ -10,7 +11,7 @@ export default function BlogId({ blogs }) {
       <main>
         <div className="container">
           <h2>{blogs.title}</h2>
-          <p>{blogs.publishedAt}</p>
+          <time dateTime={blogs.publishedAt}>{publishedAt}</time>
           <p className="category">
             {blogs.category && `${blogs.category.name}`}
           </p>
