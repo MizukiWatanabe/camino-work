@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 
 const Wrapper = css`
   border: 1px solid #006699;
-  padding: 8px;
+  padding: 16px;
   ${mq[3]} {
     // color: ;
   }
@@ -25,23 +25,43 @@ export default function Home({ blog }) {
   });
   // console.log(items);
   return (
-    <div className="container" css={Wrapper}>
-      <ul>
-        {items.map((blog) => (
-          <li key={blog.id} className="border-b-1 border-indigo-500">
-            <Link href={`/blog/${blog.id}`}>
-              <a>
-                <time dateTime={blog.publishedAt} className="mr-2">
-                  {/* day.jsを使用して日付をフォーマット */}
-                  {dayjs(blog.publishedAt).format('YYYY/MM/DD')}
-                </time>
-                {blog.title}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <main>
+        <div className="container" css={Wrapper}>
+          <section className="mb-8">
+            <h2 className="font-lato" css={mvSiteName}>
+              Camino.work
+            </h2>
+            <p className="mb-4">
+              ミチ(またはわみ)のブログ。
+              <br />
+              趣味で洋楽を聴いたり、猫をもんだりしながらたまに和訳記事などを書きます。
+            </p>
+          </section>
+          {/* TODO: 記事部分切り分け */}
+          <section>
+            <h2 className="text-xl md:text-2xl mb-2 border-b border-sky-800">
+              記事
+            </h2>
+            <ul>
+              {items.map((blog) => (
+                <li key={blog.id} className="">
+                  <Link href={`/blog/${blog.id}`}>
+                    <a>
+                      <time dateTime={blog.publishedAt} className="mr-2">
+                        {/* day.jsを使用して日付をフォーマット */}
+                        {dayjs(blog.publishedAt).format('YYYY/MM/DD')}
+                      </time>
+                      {blog.title}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </main>
+    </>
   );
 }
 
@@ -55,3 +75,18 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+const mvSiteName = css`
+  color: #006699;
+  text-align: center;
+  font-size: 3rem;
+  ${mq[1]} {
+    font-size: 5rem;
+  }
+  ${mq[2]} {
+    font-size: 8rem;
+  }
+  ${mq[5]} {
+    font-size: 12rem;
+  }
+`;
