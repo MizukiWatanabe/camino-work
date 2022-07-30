@@ -1,4 +1,17 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto max-w-screen-lg w-full px-2 lg:px-0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +26,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */

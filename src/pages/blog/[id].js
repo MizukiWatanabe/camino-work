@@ -1,24 +1,27 @@
 import { client } from '../../libs/client';
+import { MyPageSeo } from '../../components/pageSeo';
 
 export default function BlogId({ blogs }) {
   const date = blogs.publishedAt;
-  const formatDate = new Date(date);
-  const test =
-    String(formatDate.getFullYear()) +
-    String(formatDate.getMonth() - 1) +
-    String(formatDate.getDate());
-  // console.log(formatDate);
+
   return (
-    <main>
-      <h2>{blogs.title}</h2>
-      <p>{blogs.publishedAt}</p>
-      <div>{test}</div>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blogs.content}`,
-        }}
-      />
-    </main>
+    <>
+      <MyPageSeo path={'/' + blogs.id} title={blogs.title} noindex={false} />
+      <main>
+        <div className="container">
+          <h2>{blogs.title}</h2>
+          <p>{blogs.publishedAt}</p>
+          <p className="category">
+            {blogs.category && `${blogs.category.name}`}
+          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${blogs.content}`,
+            }}
+          />
+        </div>
+      </main>
+    </>
   );
 }
 
