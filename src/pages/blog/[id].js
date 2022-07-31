@@ -10,7 +10,11 @@ export default function BlogId({ blogs }) {
 
   return (
     <>
-      <MyPageSeo path={'/' + blogs.id} title={blogs.title} noindex={false} />
+      <MyPageSeo
+        path={'/blog/' + blogs.id}
+        title={blogs.title}
+        noindex={false}
+      />
       <main>
         <article>
           <div className="container" css={container}>
