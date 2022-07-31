@@ -85,15 +85,6 @@ const blogContents = css`
     width: 100%;
   }
 
-  a {
-    color: #003399;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-    &:hover {
-      color: #006699;
-    }
-  }
-
   h2 {
     border-left: 3px solid #006699;
     padding-left: 0.5rem;

@@ -13,6 +13,15 @@ body {
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
 }
 
+a {
+  color: #003399;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #006699;
+}
+
 /* html,
 body {
   padding: 0;

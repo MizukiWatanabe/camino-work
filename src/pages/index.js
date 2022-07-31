@@ -5,14 +5,6 @@ import { css } from '@emotion/react';
 import { mq } from '../style/breakpoints';
 import dayjs from 'dayjs';
 
-const Wrapper = css`
-  border: 1px solid #006699;
-  padding: 16px;
-  ${mq[3]} {
-    // color: ;
-  }
-`;
-
 export default function Home({ blog }) {
   // publishedAtで日付が新しい順に並び替え
   const items = blog.sort((a, b) => {
@@ -35,7 +27,23 @@ export default function Home({ blog }) {
             <p className="mb-4">
               ミチ(またはわみ)のブログ。
               <br />
-              趣味で洋楽を聴いたり、猫をもんだりしながらたまに和訳記事などを書きます。
+              趣味で洋楽を聴いたり猫をもんだりしながら、拙いですが洋楽の和訳記事などを書きます。
+              <br />
+              過去にこのブログにあった技術記事についてははてなブログへ移動予定です。
+            </p>
+            <p>
+              ご連絡はTwitter{' '}
+              <a
+                href="https://twitter.com/nishirohatoo"
+                className=""
+                target="_blank"
+                rel="noreferrer"
+              >
+                @nishirohatoo
+              </a>{' '}
+              まで。
+              <br />
+              DMまたはメンションをつけてご連絡ください。
             </p>
           </section>
           {/* TODO: 記事部分切り分け */}
@@ -75,6 +83,11 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+const Wrapper = css`
+  border: 1px solid #006699;
+  padding: 16px;
+`;
 
 const mvSiteName = css`
   color: #006699;
