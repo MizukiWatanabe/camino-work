@@ -86,7 +86,7 @@ const metaItems = css`
 
 const blogContents = css`
   iframe {
-    width: 100%;
+    max-width: 100%;
   }
 
   h2 {
