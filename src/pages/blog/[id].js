@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { mq } from '../../style/breakpoints';
 import { client } from '../../libs/client';
-import { MyPageSeo } from '../../components/pageSeo';
+import { PageSeo } from '../../components/PageSeo';
 import dayjs from 'dayjs';
 
 export default function BlogId({ blogs }) {
@@ -10,11 +10,7 @@ export default function BlogId({ blogs }) {
 
   return (
     <>
-      <MyPageSeo
-        path={'/blog/' + blogs.id}
-        title={blogs.title}
-        noindex={false}
-      />
+      <PageSeo path={'/blog/' + blogs.id} title={blogs.title} noindex={false} />
       <main>
         <article>
           <div className="container" css={container}>

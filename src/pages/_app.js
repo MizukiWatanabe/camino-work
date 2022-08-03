@@ -1,6 +1,7 @@
 import '../../styles/globals.css';
 import Header from '../components/Header';
 import NextHeadSeo from 'next-head-seo';
+import Layout from '@/components/layouts';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,8 +18,9 @@ function MyApp({ Component, pageProps }) {
           card: 'summary',
         }}
       />
-      <Header />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

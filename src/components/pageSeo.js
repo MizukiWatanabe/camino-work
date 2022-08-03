@@ -1,7 +1,6 @@
-// components/MyPageSeo.tsx
 import NextHeadSeo from 'next-head-seo';
 
-export const MyPageSeo = (props) => {
+export const PageSeo = (props) => {
   const {
     path,
     title = 'Camino.work',

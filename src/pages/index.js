@@ -2,12 +2,13 @@
 import Link from 'next/link';
 import { client } from '../libs/client';
 import { css } from '@emotion/react';
-import { mq } from '../style/breakpoints';
+// import { mq } from '../style/breakpoints';
 import dayjs from 'dayjs';
+import Hero from '@/components/Hero';
 
 export default function Home({ blog }) {
   // publishedAtで日付が新しい順に並び替え
-  const items = blog.sort((a, b) => {
+  const ArticleItems = blog.sort((a, b) => {
     if (a.publishedAt > b.publishedAt) {
       return -1;
     }
@@ -20,39 +21,14 @@ export default function Home({ blog }) {
     <>
       <main>
         <div className="container" css={Wrapper}>
-          <section className="mb-8">
-            <h2 className="font-lato" css={mvSiteName}>
-              Camino.work
-            </h2>
-            <p className="mb-4">
-              ミチ(またはわみ)のブログ。
-              <br />
-              趣味で洋楽を聴いたり猫をもんだりしながら、拙いですが洋楽の和訳記事などを書きます。
-              <br />
-              過去にこのブログにあった技術記事についてははてなブログへ移動予定です。
-            </p>
-            <p>
-              ご連絡はTwitter{' '}
-              <a
-                href="https://twitter.com/nishirohatoo"
-                className=""
-                target="_blank"
-                rel="noreferrer"
-              >
-                @nishirohatoo
-              </a>{' '}
-              まで。
-              <br />
-              DMまたはメンションをつけてご連絡ください。
-            </p>
-          </section>
+          <Hero />
           {/* TODO: 記事部分切り分け */}
           <section>
             <h2 className="text-xl md:text-2xl mb-2 border-b border-sky-800">
               記事
             </h2>
             <ul>
-              {items.map((blog) => (
+              {ArticleItems.map((blog) => (
                 <li key={blog.id} className="">
                   <Link href={`/blog/${blog.id}`}>
                     <a>
@@ -87,19 +63,4 @@ export const getStaticProps = async () => {
 const Wrapper = css`
   border: 1px solid #006699;
   padding: 16px;
-`;
-
-const mvSiteName = css`
-  color: #006699;
-  text-align: center;
-  font-size: 3rem;
-  ${mq[1]} {
-    font-size: 5rem;
-  }
-  ${mq[2]} {
-    font-size: 8rem;
-  }
-  ${mq[5]} {
-    font-size: 12rem;
-  }
 `;
