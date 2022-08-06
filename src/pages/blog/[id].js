@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { mq } from '../../style/breakpoints';
 import { client } from '../../libs/client';
-import { PageSeo } from '../../components/PageSeo';
+import { PageSeo } from '@/components/PageSeo';
 import dayjs from 'dayjs';
 import { color } from 'src/style/color';
 import Container from '@/components/Container';
