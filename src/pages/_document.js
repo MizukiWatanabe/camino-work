@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="ja">
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Noto+Sans+JP:wght@300&display=swap"
           rel="stylesheet"
         />
       </Head>
