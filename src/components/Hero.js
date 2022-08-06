@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { mq } from '../style/breakpoints';
+import { color } from 'src/style/color';
 
 export default function Hero() {
   return (
@@ -35,7 +36,7 @@ export default function Hero() {
 }
 
 const mvSiteName = css`
-  color: #006699;
+  color: ${color.mainBlue};
   text-align: center;
   font-size: 3rem;
   ${mq[1]} {

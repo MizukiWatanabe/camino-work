@@ -1,22 +1,24 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { mq } from '../style/breakpoints';
+import { color } from 'src/style/color';
+import Container from '@/components/Container';
 
 export default function Custom404() {
   return (
-    <main className="main">
-      <section className="container" css={Wrapper}>
+    <Container>
+      <section css={Wrapper}>
         <h2 className="font-lato" css={pageTitle}>
           404
         </h2>
         <p className="mb-4 text-center">ページがありません。</p>
       </section>
-    </main>
+    </Container>
   );
 }
 
 const Wrapper = css`
-  border: 1px solid #006699;
+  border: 1px solid ${color.mainBlue};
   padding: 16px;
   min-height: 80vh;
   display: flex;
@@ -26,7 +28,7 @@ const Wrapper = css`
 `;
 
 const pageTitle = css`
-  color: #006699;
+  color: ${color.mainBlue};
   text-align: center;
   font-size: 3rem;
   ${mq[1]} {

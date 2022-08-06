@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply w-11/12 2xl:w-full mx-auto px-2 lg:px-0 xl:max-w-screen-xl;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,28 +9,24 @@ body {
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
 }
 
+/* リンク */
 a {
   color: #003399;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
-a:hover {
-  color: #006699;
+
+@media (hover: hover) {
+  a:hover {
+    color: #006699;
+  }
 }
 
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@media (hover: none) {
+  /* リンクタップ時の強調色の調整 */
+  -webkit-tap-highlight-color: transparent;
 
-a {
-  color: inherit;
-  text-decoration: none;
+  a:active {
+    color: #006699;
+  }
 }
-
-* {
-  box-sizing: border-box;
-} */

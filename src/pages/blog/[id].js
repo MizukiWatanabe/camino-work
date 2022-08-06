@@ -4,6 +4,8 @@ import { mq } from '../../style/breakpoints';
 import { client } from '../../libs/client';
 import { PageSeo } from '../../components/PageSeo';
 import dayjs from 'dayjs';
+import { color } from 'src/style/color';
+import Container from '@/components/Container';
 
 export default function BlogId({ blogs }) {
   const publishedAt = dayjs(blogs.publishedAt).format('YYYY/MM/DD');
@@ -11,34 +13,30 @@ export default function BlogId({ blogs }) {
   return (
     <>
       <PageSeo path={'/blog/' + blogs.id} title={blogs.title} noindex={false} />
-      <main>
-        <article>
-          <div className="container" css={container}>
-            <div className="mt-5 md:mt-8 mb-4">
-              <h2 className="text-xl md:text-2xl text-center">{blogs.title}</h2>
-            </div>
-            <div className="flex justify-center mb-8 md:mb-12">
-              <div css={metaItems}>
-                <time
-                  dateTime={blogs.publishedAt}
-                  className="inline-block mr-4"
-                >
-                  {publishedAt}
-                </time>
-                <p className="category inline-block">
-                  {blogs.category && `${blogs.category.name}`}
-                </p>
-              </div>
-            </div>
-            <div
-              css={blogContents}
-              dangerouslySetInnerHTML={{
-                __html: `${blogs.content}`,
-              }}
-            />
+
+      <article className="mb-12">
+        <Container css={container} border>
+          <div className="mt-5 md:mt-8 mb-4">
+            <h2 className="text-xl md:text-2xl text-center">{blogs.title}</h2>
           </div>
-        </article>
-      </main>
+          <div className="flex justify-center mb-8 md:mb-12">
+            <div css={metaItems}>
+              <time dateTime={blogs.publishedAt} className="inline-block mr-4">
+                {publishedAt}
+              </time>
+              <p className="category inline-block">
+                {blogs.category && `${blogs.category.name}`}
+              </p>
+            </div>
+          </div>
+          <div
+            css={blogContents}
+            dangerouslySetInnerHTML={{
+              __html: `${blogs.content}`,
+            }}
+          />
+        </Container>
+      </article>
     </>
   );
 }
@@ -64,7 +62,7 @@ export const getStaticProps = async (context) => {
 };
 
 const container = css`
-  border: 1px solid #006699;
+  border: 1px solid ${color.mainBlue};
   padding: 8px 16px 48px;
   margin-bottom: 32px;
   ${mq[0]} {
@@ -73,7 +71,7 @@ const container = css`
 `;
 
 const metaItems = css`
-  border-bottom: 1px solid #006699;
+  border-bottom: 1px solid ${color.mainBlue};
   padding-bottom: 0.25rem;
   display: inline-block;
   ${mq[0]} {
@@ -86,7 +84,7 @@ const blogContents = css`
   }
 
   h2 {
-    border-left: 3px solid #006699;
+    border-left: 3px solid ${color.mainBlue};
     padding-left: 0.5rem;
     margin-bottom: 1.5rem;
     ${mq[0]} {
@@ -99,7 +97,7 @@ const blogContents = css`
   }
 
   h3 {
-    border-left: 3px solid #006699;
+    border-left: 3px solid ${color.mainBlue};
     padding-left: 0.5rem;
     margin-bottom: 1.5rem;
     ${mq[0]} {
