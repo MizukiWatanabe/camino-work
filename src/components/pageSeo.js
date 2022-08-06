@@ -1,6 +1,6 @@
 import NextHeadSeo from 'next-head-seo';
 
-export const PageSeo = (props) => {
+export function PageSeo(props) {
   const {
     path,
     title = 'Camino.work',
@@ -39,4 +39,4 @@ export const PageSeo = (props) => {
       }}
     />
   );
-};
+}
