@@ -1,6 +1,6 @@
 import NextHeadSeo from 'next-head-seo';
 
-export function PageSeo(props) {
+export default function PageSeo(props) {
   const {
     path,
     title = 'Camino.work',
