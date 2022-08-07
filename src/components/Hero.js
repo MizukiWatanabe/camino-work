@@ -15,7 +15,7 @@ export default function Hero() {
         <br />
         趣味で洋楽を聴いたり猫をもんだりしながら、拙いですが洋楽の和訳記事などを書きます。
         <br />
-        過去にこのブログにあった技術記事についてははてなブログへ移動予定です。
+        過去にこのブログにあった技術記事については、後ほど別のブログへ移動予定です。
       </p>
       <p>
         ご連絡はTwitter{' '}
@@ -36,14 +36,20 @@ export default function Hero() {
 }
 
 const mvSiteName = css`
-  color: ${color.mainBlue};
+  color: #fff;
   text-align: center;
   font-size: 3rem;
+  background-color: ${color.mainBlue};
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
+  padding: 2rem 0;
   ${mq[1]} {
     font-size: 5rem;
   }
   ${mq[2]} {
     font-size: 8rem;
+    margin-bottom: 2rem;
   }
   ${mq[5]} {
     font-size: 12rem;
