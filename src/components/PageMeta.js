@@ -1,6 +1,6 @@
 import NextHeadSeo from 'next-head-seo';
 
-export const MyPageSeo = (props) => {
+export const PageMeta = (props) => {
   const {
     path,
     title = 'Camino.work',

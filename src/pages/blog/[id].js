@@ -2,7 +2,7 @@
 import { css } from '@emotion/react';
 import { mq } from '../../style/breakpoints';
 import { client } from '../../libs/client';
-import { MyPageSeo } from '../../components/pageSeo';
+import { PageMeta } from '../../components/PageMeta';
 import dayjs from 'dayjs';
 import { color } from 'src/style/color';
 import Container from '@/components/Container';
@@ -12,7 +12,7 @@ export default function BlogId({ blogs }) {
 
   return (
     <>
-      <MyPageSeo
+      <PageMeta
         path={'/blog/' + blogs.id}
         title={blogs.title}
         noindex={false}
