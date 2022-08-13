@@ -6,6 +6,7 @@ import { PageMeta } from '../../components/PageMeta';
 import dayjs from 'dayjs';
 import { color } from 'src/style/color';
 import Container from '@/components/Container';
+import ConvertData from '@/components/convert-date';
 
 export default function BlogId({ blogs }) {
   const publishedAt = dayjs(blogs.publishedAt).format('YYYY/MM/DD');
@@ -25,9 +26,7 @@ export default function BlogId({ blogs }) {
           </div>
           <div className="flex justify-center mb-8 md:mb-12">
             <div css={metaItems}>
-              <time dateTime={blogs.publishedAt} className="inline-block mr-4">
-                {publishedAt}
-              </time>
+              <ConvertData convertDate={blogs.publishedAt}></ConvertData>
               <p className="category inline-block">
                 {blogs.category && `${blogs.category.name}`}
               </p>
