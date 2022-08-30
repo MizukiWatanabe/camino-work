@@ -22,7 +22,9 @@ export default function BlogId({ blogs }) {
       <article className="mb-12">
         <Container css={container} border>
           <div className="mt-5 md:mt-8 mb-4">
-            <h2 className="text-xl md:text-2xl text-center">{blogs.title}</h2>
+            <h2 className="text-xl md:text-2xl text-sky-800 text-center">
+              {blogs.title}
+            </h2>
           </div>
           <div className="flex justify-center mb-8 md:mb-12">
             <div css={metaItems}>

@@ -18,7 +18,9 @@ export default function Header() {
         <nav>
           <Link href="/">
             <a className="inline-block">
-              <h1 className="text-sky-900 text-2xl font-lato">Camino.work</h1>
+              <h1 className="text-sky-800 text-2xl font-pacifico">
+                Camino.work
+              </h1>
             </a>
           </Link>
           {/* <ul className="">

@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
-        notoSansJP: ['Noto Sans JP'],
+        notoSansJP: ['Noto Sans JP', 'sans-serif'],
+        pacifico: ['Pacifico', 'sans-serif'],
+        mPlusRounded: ['M PLUS Rounded 1c', 'sans-serif'],
       },
     },
   },
