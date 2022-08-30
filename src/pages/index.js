@@ -29,7 +29,7 @@ export default function Home({ blog }) {
         {/* TODO: 記事部分切り分け */}
         <section className="w-full lg:w-3/4 mx-auto border-4 border-sky-700 px-4 py-5">
           <div className="">
-            <h2 className="text-sky-800 text-xl md:text-5xl mb-2 border-b border-sky-700 font-pacifico">
+            <h2 className="text-sky-800 text-2xl md:text-5xl mb-2 border-b border-sky-700 font-pacifico">
               Article
             </h2>
             <ul>
@@ -49,7 +49,7 @@ export default function Home({ blog }) {
             </ul>
           </div>
           <div className="mt-12">
-            <h2 className="text-sky-800 text-xl md:text-5xl mb-2 border-b border-sky-700 font-pacifico">
+            <h2 className="text-sky-800 text-2xl md:text-5xl mb-2 border-b border-sky-700 font-pacifico">
               About
             </h2>
             <p className="">
