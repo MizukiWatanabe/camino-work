@@ -8,7 +8,7 @@ export default function Custom404() {
   return (
     <Container>
       <section css={Wrapper}>
-        <h2 className="font-lato" css={pageTitle}>
+        <h2 className="font-pacifico" css={pageTitle}>
           404
         </h2>
         <p className="mb-4 text-center">ページがありません。</p>
