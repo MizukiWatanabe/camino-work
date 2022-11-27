@@ -89,7 +89,7 @@ export const getStaticProps = async () => {
 };
 
 const title = css`
-  color: ${color.mainBlue};
+  color: var(--sub-blue);
   text-align: center;
   font-size: 3rem;
   font-size: clamp(1.5rem, 5vw + 1.75rem, 10rem);
