@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "markuplint:recommended"
+  ],
+  "parser": {
+    ".jsx$": "@markuplint/jsx-parser"
+  },
+  "specs": [
+    "@markuplint/react-spec"
+  ],
+  "rules": {
+    "invalid-attr": {
+      "option": {
+        "attrs": {
+          "css": {
+            "type": "String"
+          }
+        }
+      }
+    }
+  }
+}
