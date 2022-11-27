@@ -4,8 +4,6 @@ import { client } from '../libs/client';
 import { css } from '@emotion/react';
 import { mq } from '../style/breakpoints';
 import dayjs from 'dayjs';
-import { color } from 'src/style/color';
-import Hero from '@/components/Hero';
 import Container from '@/components/Container';
 
 export default function Home({ blog }) {

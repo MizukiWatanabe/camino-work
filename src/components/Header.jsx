@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import { mq } from '../style/breakpoints';
+// import { css } from '@emotion/react';
+// import { mq } from '../style/breakpoints';
 import Link from 'next/link';
 import Container from './Container';
 
-const Wrapper = css`
-  border: 1px solid red;
-  ${mq[3]} {
-    color: red;
-  }
-`;
+// const Wrapper = css`
+//   border: 1px solid red;
+//   ${mq[3]} {
+//     color: red;
+//   }
+// `;
 
 export default function Header() {
   return (

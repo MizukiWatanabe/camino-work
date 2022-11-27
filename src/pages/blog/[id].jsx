@@ -44,11 +44,16 @@ export default function BlogId({ blogs }) {
         </Container>
       </article>
 
-      <nav className="flex justify-center py-6">
-        <Link href="/">
-          <a className="align-center">トップページへ</a>
-        </Link>
-      </nav>
+      <footer className="flex flex-col content-center justify-center py-6">
+        <div className="text-center">
+          <Link href="/">
+            <a className="align-center">トップページへ</a>
+          </Link>
+        </div>
+        <div className="text-center mt-6">
+          <small className="text-sm">camino.work</small>
+        </div>
+      </footer>
     </>
   );
 }
