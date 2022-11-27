@@ -16,13 +16,12 @@ export default function Header() {
     <header className="py-4">
       <Container>
         <nav>
-          <Link href="/">
-            <a className="inline-block">
-              <h1 className="text-sky-800 text-2xl font-pacifico">
-                Camino.work
-              </h1>
-            </a>
-          </Link>
+          <p className="font-syne font-bold header-title">
+            <Link href="/">
+              <a className="inline-block ">Camino.work</a>
+            </Link>
+          </p>
+
           {/* <ul className="">
             <li>
               <Link href="/">

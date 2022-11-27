@@ -7,6 +7,7 @@ import dayjs from 'dayjs';
 import { color } from 'src/style/color';
 import Container from '@/components/Container';
 import ConvertData from '@/components/convert-date';
+import Link from 'next/link';
 
 export default function BlogId({ blogs }) {
   const publishedAt = dayjs(blogs.publishedAt).format('YYYY/MM/DD');
@@ -19,12 +20,12 @@ export default function BlogId({ blogs }) {
         noindex={false}
       />
 
-      <article className="mb-12">
+      <article className="">
         <Container css={container} border>
           <div className="mt-5 md:mt-8 mb-4">
-            <h2 className="text-xl md:text-2xl text-sky-800 text-center">
+            <h1 className="text-xl md:text-2xl text-sky-900 text-center">
               {blogs.title}
-            </h2>
+            </h1>
           </div>
           <div className="flex justify-center mb-8 md:mb-12">
             <div css={metaItems}>
@@ -42,6 +43,12 @@ export default function BlogId({ blogs }) {
           />
         </Container>
       </article>
+
+      <nav className="flex justify-center py-6">
+        <Link href="/">
+          <a className="align-center">トップページへ</a>
+        </Link>
+      </nav>
     </>
   );
 }
@@ -90,9 +97,10 @@ const blogContents = css`
   }
 
   h2 {
-    border-left: 3px solid ${color.mainBlue};
+    border-left: 8px solid ${color.mainBlue};
     padding-left: 0.5rem;
     margin-bottom: 1.5rem;
+    font-size: 1.25rem;
     ${mq[0]} {
       font-size: 1.5rem;
     }

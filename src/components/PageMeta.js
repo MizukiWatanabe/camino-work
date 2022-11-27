@@ -5,7 +5,7 @@ export const PageMeta = (props) => {
     path,
     title = 'Camino.work',
     description = 'Camino.workは洋楽の和訳メインのブログです',
-    ogImagePath = '/ogp.png',
+    ogImagePath = 'https://camino.work/ogp.png',
     noindex,
     noTitleTemplate,
   } = props;

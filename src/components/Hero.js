@@ -6,16 +6,14 @@ import { color } from 'src/style/color';
 export default function Hero() {
   return (
     <section className="mb-8">
-      <h2 className="font-lato" css={mvSiteName}>
+      <h2 className="font-syne font-bold" css={mvSiteName}>
         Camino.work
       </h2>
 
       <p className="mb-4">
-        ミチ(またはわみ)のブログ。
+        ミチ(路、またはわみ)のブログ。
         <br />
         趣味で洋楽を聴いたり猫をもんだりしながら、拙いですが洋楽の和訳記事などを書きます。
-        <br />
-        過去にこのブログにあった技術記事については、後ほど別のブログへ移動予定です。
       </p>
       <p>
         ご連絡はTwitter{' '}
