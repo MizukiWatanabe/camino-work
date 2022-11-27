@@ -5,7 +5,6 @@ import Layout from '@/components/layouts';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <meta content="ページタイトル" />
       <NextHeadSeo
         title={'Camino.work'}
         description={'Camino.workは洋楽の和訳メインのブログです'}
