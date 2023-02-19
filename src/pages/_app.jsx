@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <NextHeadSeo
         title={'Camino.work'}
-        description={'Camino.workは洋楽の和訳メインのブログです'}
+        description={'洋楽の和訳中心の音楽ブログ'}
         og={{
           image: 'https://camino.work/ogp.png',
           type: 'article',

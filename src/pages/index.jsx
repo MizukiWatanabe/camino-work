@@ -20,11 +20,12 @@ export default function Home({ blog }) {
   return (
     <>
       <Container>
-        <h1 className="my-12 font-syne font-bold" css={title}>
+        <h1 className="mt-12 font-syne font-bold" css={title}>
           Camino.work
         </h1>
+        <p className="text-center mt-4">洋楽の和訳中心の音楽ブログ</p>
         {/* TODO: 記事部分切り分け */}
-        <section className="w-full lg:w-3/4 mx-auto px-4 py-5">
+        <section className="w-full lg:w-3/4 mt-12 mx-auto px-4 py-5">
           <h2 className="text-sky-900 text-2xl md:text-5xl mb-2 border-b border-sky-900 font-syne font-bold">
             Article
           </h2>

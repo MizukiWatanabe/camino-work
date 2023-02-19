@@ -18,5 +18,24 @@
         }
       }
     }
-  }
+  },
+  "nodeRules": [
+    {
+      "selector": "meta[property]",
+      "rules": {
+        "invalid-attr": {
+          "option": {
+            "attrs": {
+              "property": {
+                "type": "String"
+              },
+              "content": {
+                "type": "String"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

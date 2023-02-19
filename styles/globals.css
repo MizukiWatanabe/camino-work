@@ -5,7 +5,8 @@
 :root {
   --main-blue: #006699;
   --sub-blue: #0c4a6e;
-  --link-hover-blue: #3399aa;
+  --link-hover-blue: #3c00bd;
+  --main-text: #444;
 }
 
 body {
@@ -13,6 +14,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Syne', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
     'Hiragino Sans', Meiryo, sans-serif;
+  color: var(--main-text);
+  letter-spacing: 0.05em;
+}
+p {
+  /* font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif; */
+  color: var(--main-text);
 }
 
 /* リンク */
@@ -20,7 +28,6 @@ a {
   color: var(--sub-blue);
   text-decoration: underline;
   transition: color 0.3s ease;
-  font-weight: bold;
 }
 
 @media (hover: hover) {
