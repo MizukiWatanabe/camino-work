@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 export default function ConvertData({ convertDate }) {
   const publishedAt = dayjs(convertDate).format('YYYY/MM/DD');
   return (
-    <time dateTime={convertDate} className="inline-block mr-4">
+    <time dateTime={convertDate} className="">
       {publishedAt}
     </time>
   );
