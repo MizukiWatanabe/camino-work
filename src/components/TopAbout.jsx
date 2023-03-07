@@ -23,7 +23,7 @@ export default function TopAbout() {
       </p>
       <p>
         TOPページの画像は
-        <a href="https://unsplash.com/photos/x3wDxZJx9qs">Unsplash</a>より。ｓ
+        <a href="https://unsplash.com/photos/x3wDxZJx9qs">Unsplash</a>より。
       </p>
     </section>
   );
