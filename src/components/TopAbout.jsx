@@ -1,6 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import { color } from 'src/style/color';
 import TopSectionTitle from './TopSectionTitle';
 
 export default function TopAbout() {

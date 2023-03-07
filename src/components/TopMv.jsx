@@ -14,13 +14,13 @@ export default function TopMv() {
         </h2>
       </div>
       <div className="col-start-1 md:col-start-7 col-end-13 row-start-1 row-end-2">
-        <div css={mvImage}>
+        <div css={mvImageWrap}>
           <Image
             src={imgMvSrc}
             className="rounded-lg"
+            css={mvImage}
             alt=""
-            width="570"
-            height="400"
+            fill
             priority
           />
         </div>
@@ -54,6 +54,16 @@ const mvSiteName = css`
   } */
 `;
 
-const mvImage = css`
+const mvImageWrap = css`
   margin-top: clamp(2rem, 1.429rem + 2.86vw, 4rem);
+  width: 100%;
+  > span {
+    position: unset !important;
+  }
+`;
+
+const mvImage = css`
+  position: relative !important;
+  width: 100% !important;
+  height: unset !important;
 `;

@@ -31,15 +31,13 @@ export default function Home({ blog }) {
             {ArticleItems.map((blog) => (
               <li key={blog.id} className="">
                 <Link href={`/blog/${blog.id}`}>
-                  <a>
-                    <ConvertData convertDate={blog.publishedAt}></ConvertData>
-                    <span
-                      className="block md:inline md:ml-2"
-                      css={articleListTitle}
-                    >
-                      {blog.title}
-                    </span>
-                  </a>
+                  <ConvertData convertDate={blog.publishedAt}></ConvertData>
+                  <span
+                    className="block md:inline md:ml-2"
+                    css={articleListTitle}
+                  >
+                    {blog.title}
+                  </span>
                 </Link>
               </li>
             ))}

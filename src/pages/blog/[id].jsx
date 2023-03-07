@@ -60,10 +60,8 @@ export default function BlogId({ blogs }) {
       >
         <Container>
           <div className="" css={articleFooterInner}>
-            <Link href="/">
-              <a className="" css={articleFooterTopLink}>
-                トップページへ
-              </a>
+            <Link href="/" css={articleFooterTopLink}>
+              トップページへ
             </Link>
           </div>
         </Container>
