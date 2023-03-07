@@ -34,7 +34,7 @@ export default function Home({ blog }) {
                   <a>
                     <ConvertData convertDate={blog.publishedAt}></ConvertData>
                     <span
-                      className="block md:inline ml-2"
+                      className="block md:inline md:ml-2"
                       css={articleListTitle}
                     >
                       {blog.title}
