@@ -20,13 +20,12 @@ export default function Header() {
     <header className="w-full md:w-11/12 xl:w-full mx-auto  xl:max-w-screen-lg px-2">
       <div css={headerBorder} className="py-2 md:py-3">
         <p className="">
-          <Link href="/">
-            <a
-              css={headerSiteName}
-              className="inline-block font-syne font-bold"
-            >
-              Camino.work
-            </a>
+          <Link
+            href="/"
+            css={headerSiteName}
+            className="inline-block font-syne font-bold"
+          >
+            Camino.work
           </Link>
         </p>
       </div>
