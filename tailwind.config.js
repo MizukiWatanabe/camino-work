@@ -8,9 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
-        notoSansJP: ['Noto Sans JP', 'sans-serif'],
-        pacifico: ['Pacifico', 'sans-serif'],
-        mPlusRounded: ['M PLUS Rounded 1c', 'sans-serif'],
+      },
+      screens: {
+        lg: '1140px',
       },
     },
   },

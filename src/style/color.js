@@ -1,6 +1,8 @@
 // 色設定
 export const color = {
-  mainBlue: '#006699',
-  subBlue: '#0c4a6e',
-  black: '#333',
+  mainText: '#444',
+  linkHoverBlue: '#3c00bd',
+  white: '#fefefe',
+  black: '#444',
+  blue: '#0c4a6e',
 };
