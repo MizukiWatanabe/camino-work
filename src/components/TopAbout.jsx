@@ -21,10 +21,10 @@ export default function TopAbout() {
         </a>
         へDMまたはメンションをつけてご連絡ください。
       </p>
+      <p>
+        TOPページの画像は
+        <a href="https://unsplash.com/photos/x3wDxZJx9qs">Unsplash</a>より。ｓ
+      </p>
     </section>
   );
 }
-
-const topSectionTitle = css`
-  border-bottom: 1px solid ${color.mainText};
-`;
