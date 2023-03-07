@@ -21,6 +21,7 @@ export default function TopMv() {
             alt=""
             width="570"
             height="400"
+            priority
           />
         </div>
       </div>
