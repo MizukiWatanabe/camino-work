@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { mq } from '../style/breakpoints';
 import { color } from 'src/style/color';
 import Container from '@/components/Container';
+import Link from 'next/link';
 
 export default function Custom404() {
   return (
@@ -12,14 +13,17 @@ export default function Custom404() {
           404
         </h2>
         <p className="mb-4 text-center">ページがありません。</p>
+        <p>
+          <Link href="/" className="">
+            トップページへ
+          </Link>
+        </p>
       </section>
     </Container>
   );
 }
 
 const Wrapper = css`
-  border: 1px solid ${color.mainBlue};
-  padding: 16px;
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -30,14 +34,5 @@ const Wrapper = css`
 const pageTitle = css`
   color: ${color.mainBlue};
   text-align: center;
-  font-size: 3rem;
-  ${mq[1]} {
-    font-size: 5rem;
-  }
-  ${mq[2]} {
-    font-size: 8rem;
-  }
-  ${mq[5]} {
-    font-size: 12rem;
-  }
+  font-size: clamp(3rem, 0.333rem + 13.33vw, 12rem);
 `;
