@@ -27,7 +27,7 @@ export default function Home({ blog }) {
         {/* TODO: 記事部分切り分け */}
         <section className="mt-12">
           <TopSectionTitle sectionTitle="記事" />
-          <ul css={articleList}>
+          <ul role="list" css={articleList}>
             {ArticleItems.map((blog) => (
               <li key={blog.id} className="">
                 <Link href={`/blog/${blog.id}`}>
@@ -52,7 +52,7 @@ export default function Home({ blog }) {
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'blogs' });
+  const data = await client.get({ endpoint: 'blogs', queries: { limit: 100 } });
   //console.log(data);
   return {
     props: {
